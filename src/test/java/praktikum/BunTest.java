@@ -29,7 +29,7 @@ public class BunTest {
     }
 
     @Test
-    public void getName() {
+    public void getNameReturnBunName() {
         Bun bun = new Bun(name, price);
         String actualName = bun.getName();
 
@@ -37,7 +37,7 @@ public class BunTest {
     }
 
     @Test
-    public void getPrice() {
+    public void getPriceReturnBunPrice() {
         Bun bun = new Bun(name, price);
         float actualPrice = bun.getPrice();
 

@@ -27,27 +27,27 @@ public class BurgerTest {
     }
 
     @Test
-    public void setBuns() {
+    public void setBunsTheBunIsSet() {
         burger.setBuns(bun);
         assertEquals(bun, burger.bun);
     }
 
     @Test
-    public void addIngredient() {
+    public void addIngredientTheIngredientIsAdded() {
         burger.addIngredient(ingredient);
         assertTrue(burger.ingredients.contains(ingredient));
         assertEquals(1, burger.ingredients.size());
     }
 
     @Test
-    public void removeIngredient() {
+    public void removeIngredientTheIngredientIsRemoved() {
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
         assertEquals(0, burger.ingredients.size());
     }
 
     @Test
-    public void moveIngredient() {
+    public void moveIngredientTheIngredientIsMoved() {
         burger.addIngredient(ingredient);
         burger.addIngredient(diffirentIngredient);
         burger.moveIngredient(1, 0);
@@ -57,7 +57,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void getPrice() {
+    public void getPriceThePriceIsCalculatedCorrect() {
         Mockito.when(bun.getPrice()).thenReturn(100.0f);
         Mockito.when(ingredient.getPrice()).thenReturn(30.0f);
         Mockito.when(diffirentIngredient.getPrice()).thenReturn(60.0f);
@@ -73,7 +73,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void getReceipt() {
+    public void getReceiptTheReceiptIsDisplayedCorrect() {
         Mockito.when(bun.getPrice()).thenReturn(100.0f);
         Mockito.when(ingredient.getPrice()).thenReturn(30.0f);
         Mockito.when(diffirentIngredient.getPrice()).thenReturn(60.0f);

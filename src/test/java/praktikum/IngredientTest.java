@@ -31,7 +31,7 @@ public class IngredientTest {
     }
 
     @Test
-    public void getPrice() {
+    public void getPriceReturnPrice() {
         Ingredient ingredient = new Ingredient(type, name, price);
         float actualPrice = ingredient.getPrice();
 
@@ -39,7 +39,7 @@ public class IngredientTest {
     }
 
     @Test
-    public void getName() {
+    public void getNameReturnName() {
         Ingredient ingredient = new Ingredient(type, name, price);
         String actualName = ingredient.getName();
 
@@ -47,7 +47,7 @@ public class IngredientTest {
     }
 
     @Test
-    public void getType() {
+    public void getTypeReturnType() {
         Ingredient ingredient = new Ingredient(type, name, price);
         IngredientType actualType = ingredient.getType();
 
